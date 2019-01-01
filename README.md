@@ -3,6 +3,7 @@ An script for properly seeing memory usage percentage using Xfce4 Generic Monito
 
 This script is intended to be used in xfce desktop environment. For example if you are using Xubuntu you can enjoy it.
 
+# Installation
 Install Generic Monitor for xfce4:
 
 apt install xfce4-genmon-plugin

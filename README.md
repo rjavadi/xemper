@@ -8,15 +8,16 @@ I had a desktop with 4 gigabytes of RAM. From time to time it went almost dead a
 
 This script is intended to be used in xfce desktop environment. For example if you are using Xubuntu you can enjoy it.
 
-Install Generic Monitor for xfce4:
+#### Install Generic Monitor for xfce4:
 
-apt install xfce4-genmon-plugin
+    sudo apt-get install xfce4-genmon-plugin
 
-Then:
-cd ~
-git clone https://github.com/eranik/xemper
+#### Then:
 
-Now do as follow step-by-step:
+    cd ~
+    git clone https://github.com/eranik/xemper
+
+#### Now do as follow step-by-step:
 
 1. Right-click on xfce panel and press add new item:
 

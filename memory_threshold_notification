@@ -10,16 +10,16 @@ path_to_file="./notified"
 
 if [ "$is_greater_than_threshold" -eq "1" ];
 then
-	 if [ ! -f "$path_to_file" ]; then
-		  notify-send "$message";
-		  touch $path_to_file
-	 else
-		  previous_time=$(date -d 'now - 30 seconds' +%s)
-		  file_time=$(date  -r "$path_to_file" +%s)
-		  if (( file_time < previous_time )); then
-				notify-send "$message";
-				touch $path_to_file
-		  fi
-	 fi
+	if [ ! -f "$path_to_file" ]; then
+		notify-send "$message";
+		touch $path_to_file
+	else
+		previous_time=$(date -d 'now - 30 seconds' +%s)
+		file_time=$(date  -r "$path_to_file" +%s)
+		if (( file_time < previous_time )); then
+			notify-send "$message";
+			touch $path_to_file
+		fi
+	fi
 fi
 echo "$percentage%"

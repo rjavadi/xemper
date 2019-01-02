@@ -1,10 +1,10 @@
 #!/bin/bash
 
-free=`cat /proc/meminfo | grep MemFree | awk '{print $2}'`;
-total=`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`;
-percentage=`bc <<< "100 - $free * 100 / $total"`
+free=$(grep MemFree /proc/meminfo | awk '{print $2}');
+total=$(grep MemTotal /proc/meminfo | awk '{print $2}');
+percentage=$(bc <<< "100 - $free * 100 / $total")
 threshold_percentage=65
-is_greater_than_threshold=`bc <<< "$percentage>$threshold_percentage"`
+is_greater_than_threshold=$(bc <<< "$percentage>$threshold_percentage")
 message="Close some programs to free RAM"
 path_to_file="./notified"
 
@@ -22,4 +22,4 @@ then
 		  fi
 	 fi
 fi
-echo $percentage%
+echo "$percentage%"
